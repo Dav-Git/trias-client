@@ -5,7 +5,6 @@ import { TRIASStopsHandler } from "./trias/TRIASStopsHandler";
 const getClient = (options: ClientOptions) : TRIASClient => {
     return new TRIASClient(options);
 };
-export default getClient
 
 class TRIASClient {
     departuresHandler;
@@ -33,3 +32,5 @@ class TRIASClient {
         return this.stopsHandler.getStops(options);
     }
 }
+
+export default TRIASClient
