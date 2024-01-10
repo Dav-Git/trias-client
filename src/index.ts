@@ -2,9 +2,10 @@ import { TRIASDeparturesHandler } from "./trias/TRIASDeparturesHandler";
 import { TRIASJourneysHandler } from "./trias/TRIASJourneysHandler";
 import { TRIASStopsHandler } from "./trias/TRIASStopsHandler";
 
-export const getClient = (options: ClientOptions) : TRIASClient => {
+const getClient = (options: ClientOptions) : TRIASClient => {
     return new TRIASClient(options);
 };
+export default getClient
 
 class TRIASClient {
     departuresHandler;
