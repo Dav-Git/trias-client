@@ -42,6 +42,7 @@ interface FPTFStopover {
     departure?: string;
     departureDelay?: number;
     departurePlatform?: string;
+    cancelled?:boolean;
 }
 
 interface FPTFJourney {

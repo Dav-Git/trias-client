@@ -78,6 +78,9 @@ export class TRIASDeparturesHandler {
             const estimatedTime = getText(selectOne("EstimatedTime", departureEl));
             if (estimatedTime) departure.departureDelay = moment(estimatedTime).unix() - moment(timetabledTime).unix();
 
+            const cancelled = getText(selectOne("Cancelled",departureEl));
+            if (cancelled) departure.cancelled = Boolean(cancelled);
+
             const plannedBay = getText(selectOne("PlannedBay Text", departureEl));
             if (plannedBay) departure.departurePlatform = plannedBay;
 
