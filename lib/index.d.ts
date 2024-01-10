@@ -1,7 +1,7 @@
 import { TRIASDeparturesHandler } from "./trias/TRIASDeparturesHandler";
 import { TRIASJourneysHandler } from "./trias/TRIASJourneysHandler";
 import { TRIASStopsHandler } from "./trias/TRIASStopsHandler";
-declare class TRIASClient {
+export declare class TRIASClient {
     departuresHandler: TRIASDeparturesHandler;
     journeysHandler: TRIASJourneysHandler;
     stopsHandler: TRIASStopsHandler;
@@ -10,4 +10,3 @@ declare class TRIASClient {
     getJourneys(options: JourneyRequestOptions): Promise<JourneysResult>;
     getStops(options: StopsRequestOptions): Promise<StopsResult>;
 }
-export default TRIASClient;

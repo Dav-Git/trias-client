@@ -6,7 +6,7 @@ const getClient = (options: ClientOptions) : TRIASClient => {
     return new TRIASClient(options);
 };
 
-class TRIASClient {
+export class TRIASClient {
     departuresHandler;
     journeysHandler;
     stopsHandler;
@@ -32,5 +32,3 @@ class TRIASClient {
         return this.stopsHandler.getStops(options);
     }
 }
-
-export default TRIASClient
