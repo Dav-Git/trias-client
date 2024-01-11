@@ -78,9 +78,15 @@ export class TRIASDeparturesHandler {
             const estimatedTime = getText(selectOne("EstimatedTime", departureEl));
             if (estimatedTime) departure.departureDelay = moment(estimatedTime).unix() - moment(timetabledTime).unix();
 
+            function toBool(string:string){
+                if ("true".includes(string)){
+                    return true
+                } else if ("false".includes(string)){
+                    return false
+                }
+            }
             const cancelled = getText(selectOne("Cancelled",departureEl));
-            console.log(cancelled);
-            if (cancelled) departure.cancelled = Boolean(cancelled);
+            if (cancelled) departure.cancelled = toBool(cancelled);
 
             const plannedBay = getText(selectOne("PlannedBay Text", departureEl));
             if (plannedBay) departure.departurePlatform = plannedBay;
