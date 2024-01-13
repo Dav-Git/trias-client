@@ -1,3 +1,12 @@
+# A word of warning
+This fork has been created due to the apparent abandonment of the original project. \
+I just wanted to support the Cancelled attribute in my own project. \
+I am in no way qualified to tinker with this stuff and I don't know how to create installable node packages. \
+⚠️ This package can not be installed via NPM. \
+I've personally just resorted to dropping it in my app root as a git submodule and importing it from there. \
+This is not how you should do things.
+
+
 # TRIAS Client
 
 **A lean Node.js client for TRIAS APIs. 🚀**
