@@ -27,6 +27,13 @@ export const TRIAS_TR = `
                     <LineType>metro</LineType>
                     <LineType>tram</LineType>
                     <LineType>bus</LineType>
+                    <LineType>ferry</LineType>
+                    <LineType>cableCar</LineType>
+                    <LineType>funicular</LineType>
+                    <LineType>expressBus</LineType>
+                    <LineType>taxi</LineType>
+                    <LineType>onDemand</LineType>
+                    <LineType>other</LineType>
                     </Include>
                 </LineRestrictions>
                 </Restrictions>
