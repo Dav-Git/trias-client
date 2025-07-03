@@ -18,6 +18,18 @@ export const TRIAS_TR = `
                     </LocationRef>
                     $ARRTIME
                 </Destination>
+                <Restrictions>
+                <LineRestrictions>
+                    <Include>
+                    <LineType>regionalTrain</LineType>
+                    <LineType>localTrain</LineType>
+                    <LineType>suburbanRailway</LineType>
+                    <LineType>metro</LineType>
+                    <LineType>tram</LineType>
+                    <LineType>bus</LineType>
+                    </Include>
+                </LineRestrictions>
+                </Restrictions>
                 <Params>
                     <IncludeTurnDescription>false</IncludeTurnDescription>
                     <IncludeTrackSections>false</IncludeTrackSections>
