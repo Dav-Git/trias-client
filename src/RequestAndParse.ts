@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
-import { Document, Node as DOMNode, Element as DOMElement, DomHandler as DOMHandler, DomHandlerOptions as DOMHandlerOptions } from "domhandler";
+import { Document, AnyNode as DOMNode, Element as DOMElement, DomHandler as DOMHandler, DomHandlerOptions as DOMHandlerOptions } from "domhandler";
 import { Options as CssSelectOptions, selectAll as _selectAll, selectOne as _selectOne, compile as _compile } from "css-select";
 import { CompiledQuery } from "css-select/lib/types";
 import { getText as _getText } from "domutils";
@@ -71,7 +71,7 @@ export function compile(selector: string, options: CssSelectOptions<DOMNode, DOM
 }
 
 export function getText(node: DOMNode | DOMNode[] | null): string | null {
-    return node ? _getText(node) : null;
+    return node ? _getText( node) : null;
 }
 
 // https://github.com/fb55/htmlparser2/blob/ee6879069b4d30ecb327ca1426747791f45d3920/src/index.ts#L18-L28

@@ -67,6 +67,7 @@ export class TRIASDeparturesHandler {
             if (lineName && departure.line) {
                 departure.line.id = lineName;
                 departure.line.line = lineName;
+
             }
 
             const direction = getText(selectOne("DestinationText Text", departureEl));
