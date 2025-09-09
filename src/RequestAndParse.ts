@@ -76,6 +76,7 @@ export function getText(node: DOMNode | DOMNode[] | null): string | null {
 
 // https://github.com/fb55/htmlparser2/blob/ee6879069b4d30ecb327ca1426747791f45d3920/src/index.ts#L18-L28
 export function parseResponse(data: string): Document {
+    data = data.replace(/siri:/g,"")
     const handler = new DOMHandler(null, {
         withStartIndices: false,
         withEndIndices: false,
@@ -89,6 +90,7 @@ export function parseResponse(data: string): Document {
     const parser = new Parser(handler, {
         xmlMode: true,
         decodeEntities: true,
+
     });
     parser.end(data);
     return handler.root;
